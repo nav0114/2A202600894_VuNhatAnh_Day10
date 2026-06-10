@@ -2,6 +2,41 @@ solution/
 .env
 lab.txt
 .venv/
+venv/
 src/*.egg-info/
 lab/
+__pycache__/
 **/__pycache__/
+*.py[cod]
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# Generated Data / DB
+data/chroma/*
+!data/chroma/.gitkeep
+data/clean/*
+!data/clean/.gitkeep
+data/embeddings/*
+!data/embeddings/.gitkeep
+data/eval/*
+!data/eval/.gitkeep
+data/quality/*
+!data/quality/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+data/reports/*
+!data/reports/.gitkeep
+data/results/*
+!data/results/.gitkeep
+*.sqlite3
+
+

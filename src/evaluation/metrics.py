@@ -124,6 +124,7 @@ def evaluate_pipeline(
                 "answer": result.answer,
                 "retrieved_doc_ids": result.retrieved_doc_ids,
                 "retrieved_contexts": result.retrieved_contexts,
+                "retrieved_titles": result.retrieved_titles,
                 "retrieval_hit": retrieval_hit,
                 "token_f1": _token_f1(item["ground_truth"], result.answer),
                 "judge": judge.model_dump(),
@@ -143,3 +144,6 @@ def evaluate_pipeline(
     write_json(metrics_output_path, summary)
     write_json(answers_output_path, answers)
     return bundle
+
+
+evaluate = evaluate_pipeline

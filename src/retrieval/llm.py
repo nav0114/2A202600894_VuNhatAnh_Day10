@@ -51,3 +51,6 @@ def build_llm(settings: Settings, temperature: float = 0.0):
             temperature=temperature,
         )
     raise RuntimeError(f"Unsupported LLM provider: {settings.llm_provider}")
+
+
+# The model name is mapped from settings.model_name (loaded from LLM_MODEL or llm_model)

@@ -172,3 +172,11 @@ class LocalEmbeddingIndex:
         if needle in self.documents_by_title:
             return self.documents_by_title[needle]
         return None
+
+
+def build_index(df: pd.DataFrame, settings: Settings, embeddings_output_path: Path | None = None) -> LocalEmbeddingIndex:
+    return LocalEmbeddingIndex.build(df, settings, embeddings_output_path)
+
+
+def search(index: LocalEmbeddingIndex, query: str, top_k: int | None = None) -> list[SearchResult]:
+    return index.search(query, top_k)
